@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Lokata"
         tools:targetApi="31">
         <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".Generic.RegistrationActivity"
             android:exported="false" />
         <activity

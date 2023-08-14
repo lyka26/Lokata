@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22406010532",
+    "project_id": "lokata-e2cb0",
+    "storage_bucket": "lokata-e2cb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22406010532:android:018a909c8720de25e83831",
+        "android_client_info": {
+          "package_name": "com.example.lokata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22406010532-p0o3i7tcgso27805erhnm0sd1etj6ga2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWxCgK1PBuJhvGzJT7K2qiW9S2qMnxLbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22406010532-p0o3i7tcgso27805erhnm0sd1etj6ga2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
