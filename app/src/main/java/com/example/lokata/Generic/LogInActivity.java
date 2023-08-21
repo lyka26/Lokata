@@ -9,13 +9,12 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lokata.DashboardActivity;
+import com.example.lokata.Driver.DriverActivity;
 import com.example.lokata.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,7 +29,6 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -147,7 +145,7 @@ public class LogInActivity extends AppCompatActivity {
 
                                 Intent intent;
                                 // Start the Home Page activity
-                                intent = new Intent(LogInActivity.this, DashboardActivity.class);
+                                intent = new Intent(LogInActivity.this, DriverActivity.class);
                                 intent.putExtra("licenseIDGet", userLicenseID);
                                 startActivity(intent);
                                 return;

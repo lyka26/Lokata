@@ -11,9 +11,6 @@ import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lokata.R;
@@ -25,11 +22,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 import java.util.regex.Pattern;
@@ -37,7 +30,7 @@ import java.util.regex.Pattern;
 public class RegistrationActivity extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    final String userRole = "Driver";
+    final String userRole = "com/example/lokata/Driver";
     private TextInputLayout FirstNameInput, MiddleNameInput, LastNameInput, EmailInput, LicenseIDInput, PasswordInput, ConfirmationPasswordInput;
     private TextInputEditText FirstNameText, MiddleNameText, LastNameText, EmailText, LicenseIDText, PasswordText, ConfirmationPasswordText;
     private Button RegistrationButton;
