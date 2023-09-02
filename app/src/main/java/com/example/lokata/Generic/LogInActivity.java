@@ -142,6 +142,7 @@ public class LogInActivity extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "We noticed your account has not been verified! Please verify your account to be able to login.", Toast.LENGTH_SHORT).show();
                                     return;
                                 }
+                                userLicenseID = LicenseIDText.getText().toString();
 
                                 Intent intent;
                                 // Start the Home Page activity

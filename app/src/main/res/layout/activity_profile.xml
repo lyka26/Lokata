@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#f5f5f5"
+tools:context="Driver.Profile.ProfileActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:background="@drawable/top_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/ProfileRelativeLayout"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/circular_shape"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Circular image -->
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circular_shape" />
+
+                    <ImageView
+                        android:id="@+id/profileImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/circular_shape" />
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:id="@+id/fullNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="180dp"
+                    android:text="Full Name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/ProfileRelativeLayout"
+                    app:layout_constraintHorizontal_bias="0.559"
+                    app:layout_constraintStart_toStartOf="@id/ProfileRelativeLayout"
+                    app:layout_constraintTop_toTopOf="@id/ProfileRelativeLayout" />
+
+                <TextView
+                    android:id="@+id/licenseIDTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="208dp"
+                    android:text="License ID"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@id/ProfileRelativeLayout"
+                    app:layout_constraintHorizontal_bias="0.492"
+                    app:layout_constraintStart_toStartOf="@id/ProfileRelativeLayout"
+                    app:layout_constraintTop_toTopOf="@id/ProfileRelativeLayout" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:background="@drawable/white_background"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="-80dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="First Name "
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/firstNameText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="First Name "
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="Middle Name "
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+               <TextView
+                    android:id="@+id/middleNameText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="Middle Name "
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+               </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="Last Name "
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/lastNameText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="Last Name "
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="Mobile #"
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/mobileNumberText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="Mobile Number"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="Email"
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="Email"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="Address"
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/addressText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="Address"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="100dp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:text="Postal Code"
+                    android:textSize="13sp"
+                    android:textColor="@color/cornflower_blue"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/postalCodeText"
+                    android:layout_width="200dp"
+                    android:layout_height="37sp"
+                    android:text="Postal Code"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Lokata"
         tools:targetApi="31">
         <activity
+            android:name=".Driver.Subscription.CurrentSubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Driver.Subscription.SubscriptionPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Driver.Subscription.SubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Driver.Profile.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".Driver.DriverActivity"
             android:exported="false" />
         <activity

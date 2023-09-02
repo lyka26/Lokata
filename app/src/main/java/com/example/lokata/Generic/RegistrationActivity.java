@@ -30,9 +30,9 @@ import java.util.regex.Pattern;
 public class RegistrationActivity extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    final String userRole = "com/example/lokata/Driver";
-    private TextInputLayout FirstNameInput, MiddleNameInput, LastNameInput, EmailInput, LicenseIDInput, PasswordInput, ConfirmationPasswordInput;
-    private TextInputEditText FirstNameText, MiddleNameText, LastNameText, EmailText, LicenseIDText, PasswordText, ConfirmationPasswordText;
+    final String userRole = "Driver";
+    private TextInputLayout FirstNameInput, MiddleNameInput, LastNameInput, EmailInput, LicenseIDInput, MobileNumberInput, AddressInput, PostalCodeInput, PasswordInput, ConfirmationPasswordInput;
+    private TextInputEditText FirstNameText, MiddleNameText, LastNameText, EmailText, LicenseIDText, MobileNumberText, AddressText, PostalCodeText, PasswordText, ConfirmationPasswordText;
     private Button RegistrationButton;
 
     @Override
@@ -46,6 +46,9 @@ public class RegistrationActivity extends AppCompatActivity {
         LastNameInput = (TextInputLayout) findViewById(R.id.LastNameInput);
         EmailInput = (TextInputLayout) findViewById(R.id.EmailInput);
         LicenseIDInput = (TextInputLayout) findViewById(R.id.LicenseIDInput);
+        MobileNumberInput = (TextInputLayout) findViewById(R.id.MobileNumberInput);
+        AddressInput = (TextInputLayout) findViewById(R.id.AddressInput);
+        PostalCodeInput = (TextInputLayout) findViewById(R.id.PostalCodeInput);
         PasswordInput = (TextInputLayout) findViewById(R.id.PasswordInput);
         ConfirmationPasswordInput = (TextInputLayout) findViewById(R.id.ConfirmationPasswordInput);
 
@@ -55,6 +58,9 @@ public class RegistrationActivity extends AppCompatActivity {
         LastNameText = (TextInputEditText) findViewById(R.id.LastNameText);
         EmailText = (TextInputEditText) findViewById(R.id.EmailText);
         LicenseIDText = (TextInputEditText) findViewById(R.id.LicenseIDText);
+        MobileNumberText = (TextInputEditText) findViewById(R.id.MobileNumberText);
+        AddressText = (TextInputEditText) findViewById(R.id.AddressText);
+        PostalCodeText = (TextInputEditText) findViewById(R.id.PostalCodeText);
         PasswordText = (TextInputEditText) findViewById(R.id.PasswordText);
         ConfirmationPasswordText = (TextInputEditText) findViewById(R.id.ConfirmationPasswordText);
         RegistrationButton = (Button) findViewById(R.id.RegisterButton);
@@ -134,6 +140,9 @@ public class RegistrationActivity extends AppCompatActivity {
         data.put("middleName", capitalize(MiddleNameText.getText().toString()));
         data.put("lastName", capitalize(LastNameText.getText().toString()));
         data.put("email", email);
+        data.put("mobileNumber", MobileNumberText.getText().toString());
+        data.put("address", AddressText.getText().toString());
+        data.put("postalCode", PostalCodeText.getText().toString());
         data.put("password", PasswordText.getText().toString());
         data.put("confirmPassword", ConfirmationPasswordText.getText().toString());
         data.put("userRole", userRole);
@@ -182,7 +191,7 @@ public class RegistrationActivity extends AppCompatActivity {
         dataInsert.put("subscriptionID", subscriptionID);
         dataInsert.put("subscriptionType", subscriptionType);
         dataInsert.put("price", subscriptionPrice);
-        dataInsert.put("userEmail", EmailText);
+        dataInsert.put("userLicenseID", licenseID);
         dataInsert.put("userRole", userRole);
         dataInsert.put("startDate", currentDate);
         dataInsert.put("endDate", expirationDate);
@@ -261,6 +270,44 @@ public class RegistrationActivity extends AppCompatActivity {
             LicenseIDInput.setHelperText(null);
             LicenseIDInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.sky_blue)));
             LicenseIDInput.setBoxStrokeColor(getResources().getColor(R.color.sky_blue));
+        }
+
+        if (MobileNumberText.getText().toString().trim().isEmpty()) {
+            MobileNumberInput.setHelperText("Field can't be empty");
+            MobileNumberInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+            MobileNumberInput.setBoxStrokeColor(getResources().getColor(R.color.red));
+            return false;
+        } else if (!MobileNumberText.getText().toString().trim().matches("\\+63\\d{10}")) {
+            MobileNumberInput.setHelperText("Invalid phone number");
+            MobileNumberInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+            MobileNumberInput.setBoxStrokeColor(getResources().getColor(R.color.red));
+            return false;
+        } else {
+            MobileNumberInput.setHelperText(null);
+            MobileNumberInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.sky_blue)));
+            MobileNumberInput.setBoxStrokeColor(getResources().getColor(R.color.sky_blue));
+        }
+
+        if (AddressText.getText().toString().trim().isEmpty()) {
+            AddressInput.setHelperText("Field can't be empty");
+            AddressInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+            AddressInput.setBoxStrokeColor(getResources().getColor(R.color.red));
+            return false;
+        } else {
+            AddressInput.setHelperText(null);
+            AddressInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.sky_blue)));
+            AddressInput.setBoxStrokeColor(getResources().getColor(R.color.sky_blue));
+        }
+
+        if (PostalCodeText.getText().toString().trim().isEmpty()) {
+            PostalCodeInput.setHelperText("Field can't be empty");
+            PostalCodeInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.red)));
+            PostalCodeInput.setBoxStrokeColor(getResources().getColor(R.color.red));
+            return false;
+        } else {
+            PostalCodeInput.setHelperText(null);
+            PostalCodeInput.setHintTextColor(ColorStateList.valueOf(getResources().getColor(R.color.sky_blue)));
+            PostalCodeInput.setBoxStrokeColor(getResources().getColor(R.color.sky_blue));
         }
 
         if (PasswordText.getText().toString().trim().isEmpty()) {
