@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- Background color of the LinearLayout -->
+    <corners android:radius="12dp"/> <!-- Radius value determines the corner rounding -->
+</shape>

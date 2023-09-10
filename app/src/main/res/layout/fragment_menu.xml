@@ -40,19 +40,19 @@ tools:context=".Fragment.MenuFragment">
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/circular_shape"
                 android:layout_alignParentBottom="true">
 
                 <ImageView
                     android:id="@+id/UserImageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
                     android:layout_centerInParent="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/circular_shape" /> <!-- Set circular drawable as background -->
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"/> <!-- Set circular drawable as background -->
 
             </RelativeLayout>
 
